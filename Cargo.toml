@@ -1,0 +1,9 @@
+[package]
+name = "jirlate"
+version = "0.3.0"
+authors = ["Lainera <fistlain@hotmail.com>"]
+edition = "2018"
+
+
+[dependencies]
+pulldown-cmark = "*"
