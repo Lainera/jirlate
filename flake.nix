@@ -1,7 +1,7 @@
 {
   description = "Translate markdown into JIRA flavor";
 	inputs = {
-		nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.11";
+		nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
 		# Crate building utils 
 		crane.url = "github:ipetkov/crane";
 		crane.inputs.nixpkgs.follows = "nixpkgs";
