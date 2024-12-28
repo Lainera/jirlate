@@ -1,7 +1,7 @@
 {
   description = "Translate markdown into JIRA flavor";
 	inputs = {
-		nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
+		nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
 		# Crate building utils 
 		crane.url = "github:ipetkov/crane";
 		crane.inputs.nixpkgs.follows = "nixpkgs";
@@ -16,7 +16,7 @@
 			let 
 				overlays = [ (import rust-overlay) ];
 				pkgs = import nixpkgs {inherit system overlays;};
-				crn = crane.lib.${system};
+				crn = crane.mkLib pkgs;
 				common = {
 					src = crn.cleanCargoSource ./.;
 					# comes from oxalica/rust-overlay
